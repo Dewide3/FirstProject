@@ -21,23 +21,26 @@ namespace Találd_ki
             {
                 Console.WriteLine("Gonndoltam egy számra, találd ki hogy melyik az. (1-és 10 között van)");
                 int x = int.Parse(Console.ReadLine());
+                int y = (9 - anscount);
+
                 anscount++;
-                if (x==CN)
+                if (x == CN)
                 {
                     Console.WriteLine("Kitaláltad!");
                     match = true;
                 }
                 else
                 {
-                    Console.WriteLine("Ez most nem talált, próbáld ujra!");
-                    Console.WriteLine("Vigyázz ez volt a " + anscount + ". ötleted.");
-                    if(anscount==10)
-                    {
-                        Console.WriteLine("Ez most nem sikerült. a válasz " + CN + "volt");
-                    }
+                    Console.WriteLine("Ez most nem talált, Probáld ujra!");
+                    Console.WriteLine("Vigyázz ez volt a " + anscount + ". ötleted. Még " + y + " lehetőséged van.");
                 }
-            }
+                        if(anscount==10)
+                        {
+                        Console.WriteLine("Ez most nem sikerült. a válasz " + CN + "volt");
+                        }
+                }
             Console.ReadKey();
+
+            }
         }
     }
-}
